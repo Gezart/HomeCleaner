@@ -119,7 +119,7 @@ query MyQuery {
                   gatsbyImageData(
                     layout: FULL_WIDTH
                     placeholder: BLURRED
-                    formats: [AUTO, WEBP, AVIF, PNG]
+                    formats: [AUTO, WEBP, AVIF]
                   )
                 }
               }

@@ -1,0 +1,94 @@
+.site-header{
+    padding-bottom: 24px;
+    .menu{
+        margin-top: 24px;
+        @media (min-width: 992px) { 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         }
+        .logo{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media (min-width: 992px){
+                margin-right: 20px;
+            }
+            .logo-svg{
+                width: 230px;
+                @media (min-width: 1199px){
+                    width: auto;
+                }
+            }
+            .menu-toggler{
+                @media (min-width: 991px){
+                    display: none;
+                }
+            }
+        }
+        .navigation{
+            display: none;
+            @media (min-width: 992px){
+                display: block;
+            }
+            ul{
+                margin-top: 20px;
+                @media (min-width: 992px){
+                    display: flex;
+                    margin-top: unset;  
+                }
+                li{
+                    margin-bottom: 15px;
+                    @media (min-width: 992px){
+                        margin-bottom: unset;
+                    }
+                    a{
+                        color: $headingColor;
+                        @media (min-width: 992px){
+                            margin-left: 24px;
+                        }
+                    }
+                    a[aria-current="page"]{
+                        color: $firstColor;
+                    }
+                }
+            }
+        }
+        .navigation.active{
+            display: block;
+        }
+     }
+     .top-header{
+        padding: 15px;
+        border-bottom: 1px solid #E5E7EB;
+        display: none;
+        @media (min-width: 992px){
+            display: block;
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+            a, p{
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 500;
+                color: $headingColor;
+            }
+            .mail-phone{
+                display: flex;
+                .contact-item{
+                    &:first-child{
+                        margin-right: 35px;
+                    }
+                }
+            }
+            .contact-item{
+                display: flex;
+                align-items: center;
+                .icon{
+                    margin-right: 15px;
+                }
+            }
+        }
+     }
+}

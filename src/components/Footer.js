@@ -122,7 +122,7 @@ const Footer = () => {
               <div className="sm-item">
                 {
                   options.socialMedia.map((smItem, index) => 
-                  <a href={smItem.link.url} key={index} dangerouslySetInnerHTML={{ __html: smItem.icon }}></a>
+                  <a href={smItem.link.url} key={index} target="_blank" dangerouslySetInnerHTML={{ __html: smItem.icon }}></a>
                   )
                 }
               </div>
@@ -134,7 +134,7 @@ const Footer = () => {
         </div>
         <div className="copyright">
           <p>© Copyright A1Hauswartung GmbH.</p>
-          <p>Made with love by <a href="https://www.nerdycreative.ch/">Nerdy Creative</a></p>
+          <p>Made with love by <a href="https://www.nerdycreative.ch/" target="_blank">Nerdy Creative</a></p>
         </div>
       </Container>
     </footer>

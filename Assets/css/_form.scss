@@ -53,6 +53,18 @@
          line-height: 24px;
          font-weight: 400;
          padding: 0 15px;
+         cursor: pointer;
+         transition: .4s;
+         &:hover{
+            background-color: #fff;
+            color: $firstColor;
+            border: 1px solid $firstColor;
+            svg{
+                path{
+                    stroke: $firstColor;
+                }
+            }
+         }
          @media (min-width: 992px){
             font-size: 18px;
             line-height: 28px;

@@ -99,7 +99,7 @@ const Contact = () => {
                 <div className="sm-item">
                   {
                     options.socialMedia.map((smItem, index) =>
-                      <a href={smItem.link.url} key={index} dangerouslySetInnerHTML={{ __html: smItem.icon }}></a>
+                      <a href={smItem.link.url} key={index} target="_blank" dangerouslySetInnerHTML={{ __html: smItem.icon }}></a>
                     )
                   }
                 </div>

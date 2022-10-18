@@ -30,6 +30,13 @@
         outline: none;
         border: 1px solid #fff;
         border-radius: 5px;
+        cursor: pointer;
+        transition: .4s;
+        &:hover{
+            background-color: #fff;
+            color: $firstColor;
+            border: 1px solid #fff;
+        }
 
     }
 }

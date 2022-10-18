@@ -83,6 +83,9 @@
                 position: absolute;
                 top: 41px;
                 right: 7%;
+                @media (min-width: 992px){
+                    display: none;
+                }
             }
         }
         .navigation.active{

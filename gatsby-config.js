@@ -11,7 +11,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Gatsby Project Title`,
+    title: `Home Cleaner`,
     description: `Example project for the Gatsby Head API`,
     twitterUsername: `@gatsbyjs`,
     // image: `/gatsby-icon.png`,

@@ -9,6 +9,7 @@ import Services from '../components/Services';
 import Images from '../components/Images';
 import Slider from '../components/Slider';
 import Contact from '../components/Contact';
+import Seo from '../components/Seo';
 
 const page = ({ pageContext: { page }}) => {
     let sections = page.sections.sections 
@@ -16,6 +17,7 @@ const page = ({ pageContext: { page }}) => {
     return (
         <main>
         <Layout slug={page.slug}>
+        <Seo title={`${page.title} - Home Cleaner`} description="Clean your home with Home Cleaner" keywords="Home Cleaner, Cleaning"/>
             {
                 sections.map((section, index) => {
                     const typeName = section.__typename;

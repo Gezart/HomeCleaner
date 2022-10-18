@@ -1,27 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
 import Logo from '../../logo.png'
 
 const Seo = ({title, description, keywords}) => {
-    const data = useStaticQuery(graphql`
-        {
-            wp {
-                acfOptionsThemeOption {
-                  themeOptions {
-                    tabIcon {
-                      localFile {
-                        childImageSharp {
-                          gatsbyImageData
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-        }
-    `)
-    console.log('>>>>>>>>>>>', Logo)
   return (
     <>
         <Helmet>

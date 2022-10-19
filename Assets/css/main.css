@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6, a, span, li, ul, p, label {
 }
 
 .container {
-  margin: 0 7%;
+  margin: 0 15px;
 }
 
 @media (min-width: 991px) {
@@ -537,7 +537,7 @@ body.hidden {
 
 @media (min-width: 992px) {
   .coloredBanner .content h3 {
-    font-size: 24px;
+    font-size: 28px;
     line-height: 32px;
   }
 }
@@ -1051,6 +1051,8 @@ body.hidden {
 
 .site-footer .sm-item svg {
   margin-right: 16px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .site-footer .sm-item svg:hover path {

@@ -63,7 +63,6 @@ const Contact = () => {
     }
   `)
   let options = data.wp.acfOptionsThemeOption.themeOptions;
-  console.log('>>>>>>>>>>>', options)
   return (
     <Container>
       <div className="contact-wrapper">

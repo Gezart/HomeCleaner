@@ -33,9 +33,9 @@ const FormComp = () => {
     formData.append("email", values.email);
     formData.append("message", values.message);
 
-    await axios.post(`http://3.74.252.24/wp-json/contact-form-7/v1/contact-forms/578/feedback`, formData, {
+    await axios.post(`${process.env.GATSBY_SUBMIT_FORM}`, formData, {
       headers: {
-        Authorization: `Basic YWRtaW46QWRtaW4xMjM=` 
+        Authorization: `Basic ${process.env.GATSBY_AUTH_TOKEN}` 
       }
     });
 

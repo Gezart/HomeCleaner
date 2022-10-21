@@ -13,6 +13,7 @@ const Header = () => {
           nodes {
             url
             label
+            uri
           }
         }
       }
@@ -93,7 +94,7 @@ const Header = () => {
               {
                 menuItems.map((item, index) =>
                   <li key={index}>
-                    <Link to={item.url}>{item.label}</Link>
+                    <Link to={item.uri}>{item.label}</Link>
                   </li>
                 )
               }

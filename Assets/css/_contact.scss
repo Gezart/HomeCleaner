@@ -42,6 +42,9 @@
             .sm-item{
                 svg{
                     margin-right: 15px;
+                    path{
+                        transition: .4s;
+                    }
                     &:hover{
                         path{
                             fill: $firstColor;

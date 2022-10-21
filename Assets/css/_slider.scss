@@ -10,6 +10,7 @@
         .swiper-slide{
             height: 145px !important;
             img{
+                cursor: grab;
                 width: 100%;
                 height: 145px !important;
             }
@@ -24,6 +25,7 @@
         width: 100%;
         img{
             width: 100%;
+            cursor: grab;
             @media (min-width: 992px){
                 height: 675px !important;
             }

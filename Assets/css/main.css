@@ -679,6 +679,8 @@ body.hidden {
 }
 
 .swipers .swiper:first-child .swiper-slide img {
+  cursor: -webkit-grab;
+  cursor: grab;
   width: 100%;
   height: 145px !important;
 }
@@ -695,6 +697,8 @@ body.hidden {
 
 .swipers .swiper:last-child img {
   width: 100%;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 @media (min-width: 992px) {
@@ -800,6 +804,11 @@ body.hidden {
 
 .form-info .contact-item .item-content .sm-item svg {
   margin-right: 15px;
+}
+
+.form-info .contact-item .item-content .sm-item svg path {
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .form-info .contact-item .item-content .sm-item svg:hover path {
@@ -1051,6 +1060,9 @@ body.hidden {
 
 .site-footer .sm-item svg {
   margin-right: 16px;
+}
+
+.site-footer .sm-item svg path {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }

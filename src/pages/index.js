@@ -15,7 +15,7 @@ import Seo from "../components/Seo";
 
 export default function Home({data}) {
  let sections = data.wpPage.sections.sections
- console.log("===================env================", process.env.SITE_URL);
+ console.log("===================env================", process.env.GATSBY_SITE_URL);
  return (
   <main>
   <Layout>

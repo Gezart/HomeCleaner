@@ -43,16 +43,16 @@ const Header = () => {
         <Container>
           <div className="contact-item">
             <div className="icon" dangerouslySetInnerHTML={{ __html: options.contactItems[0].icon }}></div>
-            <p>{options.contactItems[0].link.title}</p>
+            <p>{options.contactItems[0].link?.title}</p>
           </div>
           <div className='mail-phone'>
             <div className="contact-item">
               <div className="icon" dangerouslySetInnerHTML={{ __html: options.contactItems[1].icon }}></div>
-              <Link to={options.contactItems[1].link.url}>{options.contactItems[1].link.title}</Link>
+              <Link to={options.contactItems[1].link?.url}>{options.contactItems[1].link?.title}</Link>
             </div>
             <div className="contact-item">
               <div className="icon" dangerouslySetInnerHTML={{ __html: options.contactItems[2].icon }}></div>
-              <Link to={options.contactItems[2].link.url}>{options.contactItems[2].link.title}</Link>
+              <Link to={options.contactItems[2].link?.url}>{options.contactItems[2].link?.title}</Link>
             </div>
           </div>
         </Container>

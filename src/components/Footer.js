@@ -138,7 +138,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="copyright">
-            <p>© Copyright A1Hauswartung GmbH.</p>
+            <p>© Copyright Home Cleaner.</p>
             <p>Made with love by <a href="https://www.nerdycreative.ch/" target="_blank">Nerdy Creative</a></p>
           </div>
         </Container>

@@ -67,40 +67,43 @@ const Contact = () => {
     <Container>
       <div className="contact-wrapper">
         <div className="form-info">
-          <div className="text" dangerouslySetInnerHTML={{ __html: options.formTitle }}></div>
+          <div className="text" dangerouslySetInnerHTML={{ __html: options?.formTitle }}></div>
           <div className="form-contact">
             <div className="contact-item">
               <div className="icon" dangerouslySetInnerHTML={{ __html: options.contactItems[0]?.icon }}></div>
               <div className="item-content">
                 <h3>{options.location}</h3>
-                <p>{options.contactItems[0].link.title}</p>
+                <p>{options.contactItems[0]?.link?.title}</p>
               </div>
             </div>
-            { options.contactItems[1].link?.url &&
+            {options.contactItems[1].link?.url &&
               <div className="contact-item">
                 <div className="icon" dangerouslySetInnerHTML={{ __html: options.contactItems[1]?.icon }}></div>
                 <div className="item-content">
                   <h3>{options.email}</h3>
-                  <a href={options.contactItems[1].link?.url}>{options.contactItems[1].link.title}</a>
+                  <a href={options.contactItems[1].link?.url}>{options.contactItems[1]?.link?.title}</a>
                 </div>
               </div>
             }
-            <div className="contact-item">
-              <div className="icon" dangerouslySetInnerHTML={{ __html: options.contactItems[2]?.icon }}></div>
-              <div className="item-content">
-                <h3>{options.phone}</h3>
-                <a href={options.contactItems[2].link?.url}>{options.contactItems[2].link.title}</a>
-              </div>
+           {
+            options.contactItems[2].link?.url &&
+             <div className="contact-item">
+             <div className="icon" dangerouslySetInnerHTML={{ __html: options.contactItems[2]?.icon }}></div>
+             <div className="item-content">
+               <h3>{options.phone}</h3>
+               <a href={options.contactItems[2].link?.url}>{options.contactItems[2]?.link?.title}</a>
+             </div>
 
-            </div>
+           </div>
+           }
             <div className="contact-item">
-              <div className="icon" dangerouslySetInnerHTML={{ __html: options.contactItems[3].icon }}></div>
+              <div className="icon" dangerouslySetInnerHTML={{ __html: options.contactItems[3]?.icon }}></div>
               <div className="item-content">
-                <h3>{options.social}</h3>
+                <h3>{options?.social}</h3>
                 <div className="sm-item">
                   {
                     options.socialMedia.map((smItem, index) =>
-                      <a href={smItem.link.url} key={index} target="_blank" dangerouslySetInnerHTML={{ __html: smItem.icon }}></a>
+                      <a href={smItem?.link?.url} key={index} target="_blank" dangerouslySetInnerHTML={{ __html: smItem?.icon }}></a>
                     )
                   }
                 </div>

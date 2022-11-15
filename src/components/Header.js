@@ -46,14 +46,20 @@ const Header = () => {
             <p>{options.contactItems[0].link?.title}</p>
           </div>
           <div className='mail-phone'>
+          {
+            options.contactItems[1].link?.title &&
             <div className="contact-item">
               <div className="icon" dangerouslySetInnerHTML={{ __html: options.contactItems[1].icon }}></div>
               <Link to={options.contactItems[1].link?.url}>{options.contactItems[1].link?.title}</Link>
             </div>
-            <div className="contact-item">
-              <div className="icon" dangerouslySetInnerHTML={{ __html: options.contactItems[2].icon }}></div>
-              <Link to={options.contactItems[2].link?.url}>{options.contactItems[2].link?.title}</Link>
-            </div>
+          }
+            {
+              options.contactItems[2].link?.title &&
+              <div className="contact-item">
+                <div className="icon" dangerouslySetInnerHTML={{ __html: options.contactItems[2].icon }}></div>
+                <Link to={options.contactItems[2].link?.url}>{options.contactItems[2].link?.title}</Link>
+              </div>
+            }
           </div>
         </Container>
       </div>
@@ -89,7 +95,7 @@ const Header = () => {
           </div>
 
           <nav className={`navigation ${isOpen ? "active" : ""}`} >
-            <svg className='close-menu' onClick={() => setIsOpen(!isOpen) } fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px" height="30px"><path d="M 7.7070312 6.2929688 L 6.2929688 7.7070312 L 23.585938 25 L 6.2929688 42.292969 L 7.7070312 43.707031 L 25 26.414062 L 42.292969 43.707031 L 43.707031 42.292969 L 26.414062 25 L 43.707031 7.7070312 L 42.292969 6.2929688 L 25 23.585938 L 7.7070312 6.2929688 z" /></svg>
+            <svg className='close-menu' onClick={() => setIsOpen(!isOpen)} fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px" height="30px"><path d="M 7.7070312 6.2929688 L 6.2929688 7.7070312 L 23.585938 25 L 6.2929688 42.292969 L 7.7070312 43.707031 L 25 26.414062 L 42.292969 43.707031 L 43.707031 42.292969 L 26.414062 25 L 43.707031 7.7070312 L 42.292969 6.2929688 L 25 23.585938 L 7.7070312 6.2929688 z" /></svg>
             <ul>
               {
                 menuItems.map((item, index) =>

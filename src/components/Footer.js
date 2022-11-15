@@ -18,6 +18,8 @@ const Footer = () => {
               }
             }
           }
+          copyright
+          createdBy
           policyTitle
           policyMenu {
             title {
@@ -132,14 +134,18 @@ const Footer = () => {
                   <a href={options.contactItems[1].link?.url}>{options.contactItems[1].link?.title}</a>
                 </>
               }
-
-              <h3>{options.phoneTitle}</h3>
-              <a href={options.contactItems[2].link?.url}>{options.contactItems[2].link?.title}</a>
+              {
+                options.contactItems[2]?.link?.title &&
+                <>
+                  <h3>{options.phoneTitle}</h3>
+                  <a href={options.contactItems[2].link?.url}>{options.contactItems[2].link?.title}</a>
+                </>
+              }
             </div>
           </div>
           <div className="copyright">
-            <p>© Copyright Home Cleaner.</p>
-            <p>Made with love by <a href="https://www.nerdycreative.ch/" target="_blank">Nerdy Creative</a></p>
+            <p>{options?.copyright}</p>
+            <p dangerouslySetInnerHTML={{ __html: options?.createdBy }}></p>
           </div>
         </Container>
       </footer>

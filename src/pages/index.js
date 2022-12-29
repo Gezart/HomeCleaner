@@ -15,13 +15,12 @@ import Seo from "../components/Seo";
 
 export default function Home({data}) {
  let sections = data.wpPage.sections.sections
- console.log("===================env================", process.env.GATSBY_SITE_URL);
  return (
   <main>
   <Layout>
     <Seo title="Home - Home Cleaner" description="Clean your home with Home Cleaner" keywords="Home Cleaner, Cleaning"/>
       {
-          sections.map((section, index) => {
+          sections?.map((section, index) => {
               const typeName = section.__typename;
               switch(typeName){
               case 'WpPage_Sections_Sections_Text':

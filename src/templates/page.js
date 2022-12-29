@@ -19,7 +19,7 @@ const page = ({ pageContext: { page }}) => {
         <Layout slug={page.slug}>
         <Seo title={`${page.title} - Home Cleaner`} description="Clean your home with Home Cleaner" keywords="Home Cleaner, Cleaning"/>
             {
-                sections.map((section, index) => {
+                sections?.map((section, index) => {
                     const typeName = section.__typename;
                     switch(typeName){
                     case 'WpPage_Sections_Sections_Text':

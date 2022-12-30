@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Container from './Container'
+import CookieConsent from 'react-cookie-consent'
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -8,6 +9,7 @@ const Footer = () => {
     wp {
       acfOptionsThemeOption {
         themeOptions {
+          cookies
           footerDescription
           footerMenuTitle
           footerMenu {
@@ -148,6 +150,15 @@ const Footer = () => {
             <p dangerouslySetInnerHTML={{ __html: options?.createdBy }}></p>
           </div>
         </Container>
+        <CookieConsent
+          location="bottom"
+          buttonText="Akzeptieren"
+          cookieName="myAwesomeCookieName2"
+          style={{ background: "#007BD5", fontFamily:"inter" }}
+          buttonStyle={{ color: "#fff", backgroundColor:"#007BD5", border: "1px solid #fff", borderRadius: "6px", fontFamily:"inter", padding:"10px 20px"}}
+        >
+         {options?.cookies}
+        </CookieConsent>
       </footer>
     </>
   )

@@ -121,6 +121,7 @@ const Footer = () => {
                 }
               </ul>
             </div>
+            {/*  */}
             <div className="footer-contacts">
               <h3>{options.socialMediaTitle}</h3>
               <div className="sm-item">
